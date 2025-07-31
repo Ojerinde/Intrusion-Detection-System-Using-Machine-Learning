@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project develops a **machine learning-based Intrusion Detection System (IDS)** to classify network traffic as **normal** or **attack** using the **NSL-KDD dataset**. Leveraging a Random Forest classifier, the system achieves high accuracy in detecting cyber-attacks, making it a robust solution for cybersecurity applications such as anomaly detection, intrusion prevention, and network threat analysis.
+This project creates an **Intrusion Detection System (IDS)** based on **machine learning** to categorize network traffic as either **normal** or **attack** using the **NSL-KDD dataset**. By utilizing a Random Forest classifier, the system attains excellent accuracy in identifying cyber-attacks, presenting a strong solution for cybersecurity applications including anomaly detection, intrusion prevention, and network threat analysis.
 
 The pipeline encompasses data loading, preprocessing, feature encoding, normalization, model training, evaluation, and visualization.
 
@@ -58,10 +58,10 @@ The system is designed with a modular architecture for scalability and maintaina
 
 1. **Data Loading (`data_loader.py`)**: Efficiently ingests NSL-KDD dataset CSVs, leveraging **database** principles for file-based data management.
 2. **Preprocessing (`preprocess.py`)**: Encodes categorical features and normalizes numerical data, applying **linear algebra** for matrix transformations.
-3. **Model Training (`model.py`)**: Trains a Random Forest classifier, optimized with parallel processing (`n_jobs=-1`) for computational efficiency (**algorithms**).
+3. **Model Training (`model.py`)**: Trains a Random Forest classifier, optimized with parallel processing (`n_jobs=-1`) for computational efficiency
 4. **Visualization (`visualize.py`)**: Generates interactive plots (e.g., confusion matrix, ROC curve) to interpret results, using **statistics** for metric visualization.
-5. **Pipeline Orchestration (`main.py`)**: Coordinates the workflow, ensuring modularity and reusability (**programming**, **theory of computation**).
-6. **Prediction (`visualize.py`)**: Classifies new traffic samples, integrating preprocessing and model inference (**algorithms**).
+5. **Pipeline Orchestration (`main.py`)**: Coordinates the workflow, ensuring modularity and reusability.
+6. **Prediction (`visualize.py`)**: Classifies new traffic samples, integrating preprocessing and model inference.
 
 ## Technical Implementation
 
@@ -75,7 +75,7 @@ The system is designed with a modular architecture for scalability and maintaina
 2. **Preprocessing (`preprocess.py`)**:
 
    - Applies **LabelEncoder** for categorical features and **StandardScaler** for numerical features.
-   - Handles unseen categories in testing, showcasing robust **algorithmic** design.
+   - Handles unseen categories in testing.
 
 3. **Model Training (`model.py`)**:
 
@@ -121,17 +121,6 @@ The system is designed with a modular architecture for scalability and maintaina
 - **Traffic Classification**: Flags suspicious network behavior for real-time monitoring.
 - **SIEM Integration**: Enhances enterprise security systems with robust detection.
 - **Policy Testing**: Evaluates firewall and IDS rule effectiveness.
-
-### Demonstrated Competencies
-
-- **Mathematics**:
-  - **Linear Algebra**: Feature matrix transformations and scaling.
-  - **Probability Theory**: Random Forest ensemble predictions and ROC curve analysis.
-  - **Statistics**: Normalization, performance metrics, and data distribution analysis.
-- **Programming Skills**: Python-based modular codebase with clean, reusable functions.
-- **Algorithms and Data Structures**: Efficient preprocessing, tree-based classification, and feature importance ranking.
-- **Databases**: File-based data management for NSL-KDD dataset ingestion.
-- **Theory of Computation**: Structured pipeline with clear control flow and modularity.
 
 ## Installation and Usage
 
@@ -222,7 +211,3 @@ intrusion-detection-pipeline/
 4. [NSL-KDD Dataset on Hugging Face](https://huggingface.co/datasets/Mireu-Lab/NSL-KDD).
 5. [Scikit-learn: Random Forest Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html).
 6. [Scikit-learn: Model Evaluation Metrics](https://scikit-learn.org/stable/modules/model_evaluation.html).
-
-## License
-
-This project is licensed under the MIT License.
