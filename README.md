@@ -37,13 +37,7 @@ $$\hat{y} = \text{MajorityVote}\left\{ h_1(x), h_2(x), \ldots, h_T(x) \right\}$$
 - $h_t(x)$: Prediction from the $t$-th decision tree
 - $T$: Number of trees (set to 100 in this implementation)
 
-**Variance Reduction through Averaging**: For uncorrelated predictors with variance $\sigma^2$, the ensemble variance is:
-$$\text{Var}(\text{ensemble}) = \frac{\sigma^2}{T}$$
-
-However, real trees are correlated. With correlation coefficient $\rho$, the actual variance becomes:
-$$\text{Var}(\text{ensemble}) = \rho\sigma^2 + \frac{1-\rho}{T}\sigma^2$$
-
-**Bootstrap Sampling**: Each tree trains on a bootstrap sample (sampling with replacement), introducing randomness that decorrelates the trees. This leverages the **Strong Law of Large Numbers**—as $T \to \infty$, the ensemble average converges to the expected prediction.
+**Bootstrap Sampling**: Each tree trains on a bootstrap sample (sampling with replacement), introducing randomness that decorrelates the trees. This leverages the **Strong Law of Large Numbers** as $T \to \infty$, the ensemble average converges to the expected prediction.
 
 **Feature Randomness**: At each split, only $\sqrt{d}$ features (where $d$ is total features) are considered, further reducing correlation between trees and improving generalization.
 
@@ -53,11 +47,6 @@ $$\text{Var}(\text{ensemble}) = \rho\sigma^2 + \frac{1-\rho}{T}\sigma^2$$
 - **Robust to Outliers**: Tree-based splits are less sensitive to extreme values than linear models
 - **Implicit Feature Selection**: Important features naturally appear more frequently in tree splits
 - **Probability Estimates**: Provides confidence scores via the proportion of trees voting for each class
-
-**Information-Theoretic Foundation**: Each tree split maximizes information gain:
-$$\text{InfoGain}(S, A) = \text{Entropy}(S) - \sum_{v \in \text{Values}(A)} \frac{|S_v|}{|S|} \text{Entropy}(S_v)$$
-
-This greedy approach builds trees that efficiently partition the feature space to separate normal from malicious traffic patterns.
 
 ### Evaluation Metrics (Statistics)
 
