@@ -131,25 +131,17 @@ The system is designed with a modular architecture for scalability and maintaina
 
 ### Setup Instructions
 
-1. Clone the repository:
+1. Install dependencies:
 
-   ```bash
-   git clone https://github.com/your-username/intrusion-detection-pipeline.git
-   cd intrusion-detection-pipeline
-   ```
+```bash
+  pip install -r requirements.txt
+```
 
-2. Install dependencies:
+2. Run the pipeline:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Place NSL-KDD dataset files in `data/` directory.
-
-4. Run the pipeline:
-   ```bash
-   python src/main.py
-   ```
+```bash
+python src/main.py
+```
 
 ## Visualizations
 
