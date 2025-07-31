@@ -8,7 +8,7 @@ The pipeline encompasses data loading, preprocessing, feature encoding, normaliz
 
 ## Mathematical Foundation
 
-### Feature Scaling (Statistics, Linear Algebra)
+### Feature Scaling
 
 **Why Feature Scaling Matters**: To fully understand the necessity of feature scaling, consider that machine learning algorithms often compute distances or gradients. When features exist on vastly different scales (e.g., packet size in bytes vs. connection duration in seconds), the algorithm becomes biased toward larger-magnitude features, leading to suboptimal convergence.
 
@@ -26,7 +26,7 @@ $$z = \frac{x - \mu}{\sigma}$$
 $$\mathbf{Z} = (\mathbf{X} - \boldsymbol{\mu}^T) \cdot \text{diag}(\boldsymbol{\sigma}^{-1})$$
 where $\boldsymbol{\mu}$ and $\boldsymbol{\sigma}$ are the mean and standard deviation vectors.
 
-### Random Forest Classifier (Probability Theory, Algorithms)
+### Random Forest Classifier
 
 **Ensemble Learning Principle**: To fully understand Random Forest's effectiveness, we must examine how it addresses the bias-variance tradeoff. Individual decision trees have low bias but high variance—they can perfectly fit training data but generalize poorly.
 
@@ -48,13 +48,13 @@ $$\hat{y} = \text{MajorityVote}\left\{ h_1(x), h_2(x), \ldots, h_T(x) \right\}$$
 - **Implicit Feature Selection**: Important features naturally appear more frequently in tree splits
 - **Probability Estimates**: Provides confidence scores via the proportion of trees voting for each class
 
-### Evaluation Metrics (Statistics)
+### Evaluation Metrics
 
-Performance is evaluated using accuracy, precision, recall, F1-score, and AUC-ROC, grounded in **probability theory** and **statistics** to quantify model reliability.
+Performance is evaluated using accuracy, precision, recall, F1-score, and AUC-ROC.
 
 ## System Architecture
 
-The system is designed with a modular architecture for scalability and maintainability, reflecting advanced **programming skills** and **algorithmic design**:
+The system is designed with a modular architecture for scalability and maintainability.
 
 1. **Data Loading (`data_loader.py`)**: Efficiently ingests NSL-KDD dataset CSVs, leveraging **database** principles for file-based data management.
 2. **Preprocessing (`preprocess.py`)**: Encodes categorical features and normalizes numerical data, applying **linear algebra** for matrix transformations.
